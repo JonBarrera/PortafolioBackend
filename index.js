@@ -1,8 +1,13 @@
+if(process.env.NODE_ENV !== 'production'){
+    require('dotenv').config();
+}
+
 const express = require('express');
 const morgan = require('morgan');
 //const multer = require('multer');
 //const path = require('path');
 const cors = require('cors');
+const { config } = require('dotenv');
 
 //Initialization
 const app = express();
