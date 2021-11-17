@@ -26,3 +26,16 @@ app.use('/api/books', require('./src/routes/books'));
 app.listen(app.get('port'), () => {
     console.log('Serve on port: ', app.get('port'));
 })
+
+//Home aplication
+app.get('/', (req, res, next) => {
+
+    res.status(200).json({
+        status: 'success',
+        data: {
+            name: 'api portafolio',
+            version: '0.1.0'
+        }
+    });
+
+});

@@ -2,10 +2,6 @@ const { Router } = require('express');
 const router = Router();
 
 const Book = require('../models/book');
-// Home route
-router.get("/", (req, res) => {
-    res.send("Welcome to a basic express App");
-  });
 
 router.get('/', async(req, res) => {
     const books = await Book.find();
